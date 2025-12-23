@@ -14,7 +14,6 @@ import {
     IconPackage
 } from "@tabler/icons-react";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { logout } from "@/store/feature/user/userSlice";
 import { useDispatch } from "react-redux";
