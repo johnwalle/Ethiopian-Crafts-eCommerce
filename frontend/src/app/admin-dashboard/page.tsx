@@ -149,16 +149,18 @@ const DashboardPage: React.FC = () => {
         </SidebarBody>
       </Sidebar>
 
-      <div className="flex flex-1 overflow-y-auto rounded-l-2xl border-l border-neutral-200 bg-white shadow-inner dark:border-neutral-800 dark:bg-neutral-900">
-        {activeLink === "dashboard" && <AdminAnalyticsDashboard />}
-        {activeLink === "add-product" && <AddProduct />}
-        {activeLink === "add-blog" && <AddBlog />}
-        {activeLink === "add-artisan" && <AddArtisanForm />}
-        {activeLink === "manage-products" && <ProductManager />}
-        {activeLink === "manage-blogs" && <BlogManager />}
-        {activeLink === "manage-orders" && <ManageOrders />}
-        {activeLink === "manage-customers" && <ManageCustomers />}
-        {activeLink === "manage-artisans" && <ManageArtisans />}
+      {/* Footer / Profile */}
+      <div className="pt-3 border-t border-neutral-200/60 dark:border-neutral-700/50">
+        <SidebarLink
+          link={{
+            label: "Logout",
+            href: "#",
+            icon: (
+                <IconArrowLeft className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+            ),
+          }}
+          onClick={(e) => handleLinkClick("logout", e)}
+        />
       </div>
     </div>
   );

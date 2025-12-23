@@ -70,11 +70,12 @@ export default function PurchasedProducts() {
   if (error) return <div className="p-8 text-center text-red-500">{error}</div>;
   if (orders.length === 0)
     return (
-      <div className="p-8 text-gray-500 text-center flex flex-col items-center gap-3">
+      <div className="min-h-[70vh] flex flex-col mx-auto items-center justify-center text-gray-500 text-center gap-3">
         <IconShoppingBag className="w-12 h-12 opacity-60" />
         <p className="text-lg font-medium">You haven’t placed any orders yet.</p>
       </div>
     );
+  
 
   return (
     <div className="flex-1 p-8 bg-gradient-to-br from-gray-50 to-indigo-50 min-h-screen font-sans">

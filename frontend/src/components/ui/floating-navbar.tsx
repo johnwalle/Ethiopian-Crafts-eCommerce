@@ -23,6 +23,8 @@ export const FloatingNav = ({
   // Scroll visibility logic
   const { scrollYProgress } = useScroll();
   const [visible, setVisible] = useState(false);
+  const user = useSelector((state: RootState) => state.user.user?.user);
+  const isUserAdmin = user?.role === 'admin';
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     // Check if current is not undefined and is a number
@@ -72,7 +74,7 @@ export const FloatingNav = ({
 
           {/* Conditional Login/Dashboard Link */}
           {isLoggedIn ? (
-            <Link href="/dashboard" className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
+            <Link href={`/${isUserAdmin ? 'admin-dashboard': 'dashboard'}`} className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
               Dashboard
               <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent h-px" />
             </Link>
