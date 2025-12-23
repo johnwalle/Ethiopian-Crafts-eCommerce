@@ -21,7 +21,7 @@ const ProductListingPage = () => {
     if (products.length === 0) {
       fetchProductsHandler();
     }
-  }, [fetchProductsHandler, products]);
+  }, [fetchProductsHandler, products.length]);
 
   const filteredProducts = products.filter(
     (product) => selectedCategory === 'All' || product.category === selectedCategory

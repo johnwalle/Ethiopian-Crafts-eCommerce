@@ -50,8 +50,8 @@ export const checkout = async (order: IOrder, user: IUser): Promise<ChapaRespons
             first_name: first,
             last_name: last,
             tx_ref,
-            callback_url: `http://localhost:8000/api/checkout/verify/${user._id}`,
-            return_url: `http://localhost:3000/dashboard`,
+            callback_url: `https://ethiopian-crafts-ecommerce.onrender.com/api/checkout/verify/${user._id}`,  
+            return_url: `https://ethiopian-crafts-e-commerce.vercel.app/dashboard?tab=orders`,
         };
 
         const response = await axios.post<ChapaResponse>(

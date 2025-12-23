@@ -41,8 +41,69 @@ const nextConfig = {
         },
         {
           protocol: 'https',
-          hostname: '**',
-          
+          hostname: 'www.welana.com',
+          port: '', // Leave empty for default port
+          pathname: '/**', // Allow all paths under the hostname
+        },
+        {
+          protocol: 'https',
+          hostname: 'www.rumispice.com',
+          port: '', // Leave empty for default port
+          pathname: '/**', // Allow all paths under the hostname
+        },
+        {
+          protocol: 'https',
+          hostname: 'cdn.britannica.com',
+          port: '', // Leave empty for default port
+          pathname: '/**', // Allow all paths under the hostname
+        },
+        {
+          protocol: 'https',
+          hostname: 'artincontext.org',
+          port: '', // Leave empty for default port
+          pathname: '/**', // Allow all paths under the hostname
+        },
+        {
+          protocol: 'https',
+          hostname: 'thumbs.dreamstime.com',
+          port: '', // Leave empty for default port
+          pathname: '/**', // Allow all paths under the hostname
+        },
+        {
+          protocol: 'https',
+          hostname: 'upload.wikimedia.org',
+          port: '', // Leave empty for default port
+          pathname: '/**', // Allow all paths under the hostname
+        },
+        {
+          protocol: 'https',
+          hostname: 'c7.alamy.com',
+          port: '', // Leave empty for default port
+          pathname: '/**', // Allow all paths under the hostname
+        },
+        {
+          protocol: 'https',
+          hostname: 'cdn.shopify.com',
+          port: '', // Leave empty for default port
+          pathname: '/**', // Allow all paths under the hostname
+        },
+        {
+          protocol: 'https',
+          hostname: 'i.pinimg.com',
+          port: '', // Leave empty for default port
+          pathname: '/**', // Allow all paths under the hostname
+        },
+        {
+          protocol: 'https',
+          hostname: 'pageaucarvings.com',
+          port: '', // Leave empty for default port
+          pathname: '/**', // Allow all paths under the hostname
+        },
+        {
+          protocol: 'https',
+          hostname: 'i.pravatar.cc',
+          port: '', // Leave empty for default port
+          pathname: '/**', // Allow all paths under the hostname
         },
       ],
     },

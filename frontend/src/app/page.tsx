@@ -11,6 +11,7 @@ import useFcmToken from "@/hooks/useFcmToken";
 import { useSelector } from "react-redux";
 import { RootState } from "@/store/store";
 import { saveFcmToken } from "@/api/user/userAPI";
+import  Link  from "next/link";
 
 const HomePage: React.FC = () => {
   const { token } = useFcmToken();
@@ -97,35 +98,35 @@ const HomePage: React.FC = () => {
     {
       name: "Handwoven Textiles",
       title: "Traditional Ethiopian Weavings",
-      image: "https://cdn.gamma.app/m3rdunp6aj4a2ph/generated-images/ukBdpjyMRidArq0arvhLI.jpg", // Replace with actual image URL
+      image: "https://cdn.shopify.com/s/files/1/0274/3107/5938/files/ITC_ETHIOPIA_SABAHAR_2019_YONAS_TADESSE-2658_2048x2048.jpg?v=1622592496", // Replace with actual image URL
       description:
         "Beautifully handwoven fabrics, showcasing intricate patterns and vibrant colors, representing the diverse cultures across Ethiopia.",
     },
     {
       name: "Ethiopian Pottery",
       title: "Handcrafted Ceramics",
-      image: "https://cdn.gamma.app/m3rdunp6aj4a2ph/generated-images/ukBdpjyMRidArq0arvhLI.jpg", // Replace with actual image URL
+      image: "https://c7.alamy.com/comp/B67JN7/ethiopian-coffee-pots-B67JN7.jpg", // Replace with actual image URL
       description:
         "Authentic, handmade pottery, each piece uniquely designed, often inspired by traditional Ethiopian motifs and natural elements.",
     },
     {
       name: "Beaded Jewelry",
       title: "Traditional Ethiopian Jewelry",
-      image: "https://cdn.gamma.app/m3rdunp6aj4a2ph/generated-images/ukBdpjyMRidArq0arvhLI.jpg", // Replace with actual image URL
+      image: "https://i.pinimg.com/1200x/a7/c5/55/a7c55590d0c109d41c26dc0c4e71dd82.jpg", // Replace with actual image URL
       description:
         "Exquisite beaded jewelry crafted by artisans, representing Ethiopia’s rich cultural heritage, with designs passed down through generations.",
     },
     {
       name: "Ethiopian Carvings",
       title: "Wooden Sculptures and Carvings",
-      image: "https://cdn.gamma.app/m3rdunp6aj4a2ph/generated-images/wGZH4ULoQZthoq3ANZ_b-.jpg", // Replace with actual image URL
+      image: "https://pageaucarvings.com/uploads/2/7/6/4/2764025/3745787_orig.jpg?365", // Replace with actual image URL
       description:
         "Hand-carved wooden sculptures, ranging from religious figures to symbolic animals, showcasing the artistic craftsmanship of Ethiopian artisans.",
     },
     {
       name: "Ethiopian Basketry",
       title: "Handcrafted Baskets",
-      image: "https://cdn.gamma.app/m3rdunp6aj4a2ph/generated-images/wGZH4ULoQZthoq3ANZ_b-.jpg", // Replace with actual image URL
+      image: "https://thumbs.dreamstime.com/b/habesha-baskets-83615415.jpg", // Replace with actual image URL
       description:
         "Crafted from natural fibers, these traditional Ethiopian baskets are both functional and decorative, often used in daily life or as home decor.",
     },
@@ -153,11 +154,11 @@ const HomePage: React.FC = () => {
           <p className="font-extralight text-base md:text-4xl dark:text-neutral-200 py-4">
             Authentic Ethiopian Artistry
           </p>
-          <button
-            className="bg-black dark:bg-white text-white dark:text-black rounded-full px-6 py-3 transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white shadow-md hover:shadow-lg"
-          >
+          <Link href="/products" className="bg-black dark:bg-white text-white dark:text-black rounded-full px-6 py-3 transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white shadow-md hover:shadow-lg">
+          
             Shop now
-          </button>
+          
+          </Link>
         </motion.div>
       </AuroraBackground>
       <HeroParallax products={products} />;
